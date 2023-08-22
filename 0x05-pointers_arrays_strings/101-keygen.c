@@ -2,68 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- *  * main - program that generates random valid
- *   * passwords for the program 101-crackme
- *    *
- *     * Return: Always 0 (Success)
- *      */
-int main(void)
-{
-		int pass[100];
-			int i, sum, n;
+#define PASSWORD_LENGTH 10
 
-				sum = 0;	
-
-					srand(time(NULL));
-
-						for (i = 0; i < 100; i++)
-								{
-											pass[i] = rand() % 78;
-													sum += (pass[i] + '0');
-															putchar(pass[i] + '0');
-																	if ((2772 - sum) - '0' < 78)
-																				{
-																								n = 2772 - sum - '0';
-																											sum += n;
-																														putchar(n + '0');
-																																	break;
-																																			}
-																		}
-
-							return (0);
-} #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-/**
- *  * main - program that generates random valid
- *   * passwords for the program 101-crackme
- *    *
- *     * Return: Always 0 (Success)
- *      */
-int main(void)
-{
-		int pass[100];
-			int i, sum, n;
-
-				sum = 0;	
-
-					srand(time(NULL));
-
-						for (i = 0; i < 100; i++)
-								{
-											pass[i] = rand() % 78;
-													sum += (pass[i] + '0');
-															putchar(pass[i] + '0');
-																	if ((2772 - sum) - '0' < 78)
-																				{
-																								n = 2772 - sum - '0';
-																											sum += n;
-																														putchar(n + '0');
-																																	break;
-																																			}
-																		}
-
-							return (0);
-} 
+void generateRandomPassword(char *password, int length) {
+	    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	        int i;
+		    
+		    for (i = 0; i < length - 1; i++) {
+			            int index = rand() % (sizeof(charset) - 1);
+				            password[i] = charset[index];
+					        }
+		        
+		        password[length - 1] = '\0'; // Null-terminate the password
+						     // }
+						     //
+						     // int main() {
+						     //     srand(time(NULL)); // Seed the random number generator with current time
+						     //         
+						     //             char password[PASSWORD_LENGTH];
+						     //                 generateRandomPassword(password, PASSWORD_LENGTH);
+						     //                     
+						     //                         printf("Generated Password: %s\n", password);
+						     //                             
+						     //                                 return 0;
+						     //                                 }
+						    //
