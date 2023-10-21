@@ -1,13 +1,11 @@
-#include <stdio.h>
-#include "dog.h"
-
-int main(void)
+#ifndef DOG_H 
+#define DOG H
+struct dog - a dog struct
+*name: dog's name 
+*age: dog's age
+*owner: owner's name
+* Description: just a lone dog struct in a big kitty world
+struct dog
 {
-    struct dog my_dog;
+#endif
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
-}
