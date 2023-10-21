@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-readme
-=======
 ##C - malloc, free
 		
 
@@ -133,4 +130,3 @@ Note that we will compile with your alloc-grid.c file. Make sure it compiles.
 		
 - If your function fails, it should return NULL
 
->>>>>>> 75f973ca35e0dd6fe532c963d5f8583180485570
